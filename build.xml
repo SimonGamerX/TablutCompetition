@@ -22,7 +22,7 @@
     </target>
     
     <target name="server">
-        <java classname="it.unibo.ai.didattica.competition.tablut.server.Server" fork="true">
+        <java classname="tablut.server.Server" fork="true">
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
                 <pathelement location="lib/commons-cli-1.4.jar"/>
@@ -34,7 +34,7 @@
     <target name="server-jar">
         <jar destfile="server.jar" filesetmanifest="mergewithoutmain">
             <manifest>
-                <attribute name="Main-Class" value="it.unibo.ai.didattica.competition.tablut.server.Server"/>
+                <attribute name="Main-Class" value="tablut.server.Server"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
             <fileset dir="build"/>
@@ -44,7 +44,7 @@
     </target>
     
     <target name="gui-server">
-        <java classname="it.unibo.ai.didattica.competition.tablut.server.Server" fork="true">
+        <java classname="tablut.server.Server" fork="true">
             <arg value="-g"/>
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
@@ -55,7 +55,7 @@
     </target>
 
     <target name="randomwhite">
-        <java classname="it.unibo.ai.didattica.competition.tablut.client.TablutRandomWhiteClient" fork="true">
+        <java classname="tablut.client.TablutRandomWhiteClient" fork="true">
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
                 <pathelement location="build"/>
@@ -64,7 +64,7 @@
     </target>
 
     <target name="randomblack">
-        <java classname="it.unibo.ai.didattica.competition.tablut.client.TablutRandomBlackClient" fork="true">
+        <java classname="tablut.client.TablutRandomBlackClient" fork="true">
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
                 <pathelement location="build"/>
@@ -75,7 +75,7 @@
     <target name="random-jar">
         <jar destfile="random.jar" filesetmanifest="mergewithoutmain">
             <manifest>
-                <attribute name="Main-Class" value="it.unibo.ai.didattica.competition.tablut.client.TablutRandomClient"/>
+                <attribute name="Main-Class" value="tablut.client.TablutRandomClient"/>
                 <attribute name="Class-Path" value="."/>
             </manifest>
             <fileset dir="build"/>
@@ -85,7 +85,7 @@
     </target>
 
     <target name="humanwhite">
-        <java classname="it.unibo.ai.didattica.competition.tablut.client.TablutHumanWhiteClient" fork="true">
+        <java classname="tablut.client.TablutHumanWhiteClient" fork="true">
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
                 <pathelement location="build"/>
@@ -94,7 +94,7 @@
     </target>
 	
     <target name="humanblack">
-        <java classname="it.unibo.ai.didattica.competition.tablut.client.TablutHumanBlackClient" fork="true">
+        <java classname="tablut.client.TablutHumanBlackClient" fork="true">
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
                 <pathelement location="build"/>
@@ -104,7 +104,7 @@
 	
 
     <target name="tester">
-        <java classname="it.unibo.ai.didattica.competition.tablut.tester.Tester" fork="true">
+        <java classname="tablut.tester.Tester" fork="true">
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
                 <pathelement location="build"/>
@@ -113,7 +113,7 @@
     </target>
 
     <target name="aiwhite">
-        <java classname="it.unibo.ai.didattica.competition.tablut.client.TablutAIWhiteClient" fork="true">
+        <java classname="tablut.client.TablutAIWhiteClient" fork="true">
             <arg value="10"/> <!-- Timeout -->
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
@@ -124,7 +124,7 @@
     </target>
 
     <target name="aiblack">
-        <java classname="it.unibo.ai.didattica.competition.tablut.client.TablutAIBlackClient" fork="true">
+        <java classname="tablut.client.TablutAIBlackClient" fork="true">
             <arg value="10"/> <!-- Timeout -->
             <classpath>
                 <pathelement location="lib/gson-2.2.2.jar"/>
